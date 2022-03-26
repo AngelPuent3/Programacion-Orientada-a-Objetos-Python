@@ -22,7 +22,7 @@ class Ingeniero(Persona):
             self.paga = hour * proyecto
             self.paga = self.paga * self.tipoPaga
             print("-------------")
-            print("Nombre:", self.nombre, "\nRFC:", self.RFC, "\nSu salario total es: $", self.paga)
+            print("Nombre: Ing.", self.nombre, "\nRFC:", self.RFC, "\nSu salario total es: $", self.paga)
             print("-------------")
             F = input("Enter >>>")
             from main import main
@@ -31,7 +31,7 @@ class Ingeniero(Persona):
         elif f == 2:
             self.paga = hour * self.tipoPaga
             print("-------------")
-            print("Nombre:", self.nombre, "\nRFC:", self.RFC, "\nSu salario total es: $", self.paga)
+            print("Nombre: Ing.",self.nombre,"\nRFC:",self.RFC,"\nSu salario total es: $",self.paga)
             print("-------------")
             F = input("Enter >>>")
             from main import main

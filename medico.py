@@ -20,7 +20,7 @@ class Medico(Persona):
         self.paga = self.paga + recete
         print("-------------")
         print("Medico:")
-        print("Nombre:", self.nombre, "\nRFC:", self.RFC, "\nSu salario total es: $", self.paga)
+        print("Nombre: Dr.",self.nombre,"\nRFC:",self.RFC,"\nSu salario total es: $",self.paga)
         print("-------------")
         F = input("Enter >>>")
         from main import main

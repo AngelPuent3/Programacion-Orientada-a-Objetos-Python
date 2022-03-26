@@ -6,5 +6,4 @@ class Persona:
         self.paga = int
 
     def calcularSalario(self):
-
         pass
