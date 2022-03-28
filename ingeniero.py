@@ -29,7 +29,7 @@ class Ingeniero(Persona):
             main()
             return
         elif f == 2:
-            self.paga = hour * self.tipoPaga
+            self.paga = hour + self.tipoPaga
             print("-------------")
             print("Nombre: Ing.",self.nombre,"\nRFC:",self.RFC,"\nSu salario total es: $",self.paga)
             print("-------------")
