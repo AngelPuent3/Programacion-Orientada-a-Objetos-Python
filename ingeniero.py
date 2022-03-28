@@ -1,4 +1,4 @@
-from personas import Persona
+from PERSONAS import Persona
 class Ingeniero(Persona):
     def calcularSalario(self):
         print("-----------------")
@@ -20,7 +20,7 @@ class Ingeniero(Persona):
             print("¿Cuantos proyectos tuvo?")
             proyecto = int(input(">"))
             self.paga = hour * proyecto
-            self.paga = self.paga * self.tipoPaga
+            self.paga = self.paga + self.tipoPaga
             print("-------------")
             print("Nombre: Ing.", self.nombre, "\nRFC:", self.RFC, "\nSu salario total es: $", self.paga)
             print("-------------")
