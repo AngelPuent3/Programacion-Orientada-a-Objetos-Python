@@ -3,7 +3,7 @@ def main():
     print("------------------------")
     print("Calculadora de salarios")
     print("------------------------")
-    print("¿Quien esta usando?...")
+    print("  ¿Quien esta usando?")
     print("1.-Obrero\n2.-Ingeniero\n3.-Medico\n4.-Salir")
     fmain=int(input(">"))
     if fmain==1:
