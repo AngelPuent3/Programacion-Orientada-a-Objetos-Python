@@ -19,7 +19,7 @@ class Ingeniero(Persona):
         if f == 1:
             print("¿Cuantos proyectos tuvo?")
             proyecto = int(input(">"))
-            self.paga = hour * proyecto
+            self.paga = hour + proyecto
             self.paga = self.paga + self.tipoPaga
             print("-------------")
             print("Nombre: Ing.", self.nombre, "\nRFC:", self.RFC, "\nSu salario total es: $", self.paga)
