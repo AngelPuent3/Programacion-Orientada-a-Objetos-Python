@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Persona(ABC):
+class Datos(ABC):
     def __init__(self):
         self.nombre = str
         self.edad = int
@@ -27,7 +27,7 @@ class Persona(ABC):
 
 
 
-class Alumno(Persona):
+class Paciente(Datos):
     def __init__(self):
         super().__init__()
         self.imc=0
@@ -68,3 +68,22 @@ class Alumno(Persona):
             print("Consumir mas frutas y verduras, ademas de aumentar el ejercico")
         else:
             exit("Adios")
+
+def main ():
+    print("Bienvenido\nCalculadora de IMC\nEnter para continuar >>>")
+    f=input()
+    paciente = Paciente()
+    print("1.- Calcular IMC\n2.- Calcular Signos\n3.- Recomendaciones\n4.- Salir")
+    while True:
+        opcion = int(input("Ingrese una opcion: "))
+        if opcion == 1:
+            paciente.calcularIMC()
+        elif opcion == 2:
+            paciente.calcularSignos()
+        elif opcion == 3:
+            paciente.recomendaciones()
+        elif opcion == 4:
+            exit("Adios")
+        else:
+            print("Opcion no valida")
+main()
