@@ -68,6 +68,18 @@ class Paciente(Datos):
             print("Consumir mas frutas y verduras, ademas de aumentar el ejercico")
         else:
             exit("Adios")
+            
+     def recomendacionesSignos(self):
+        print("Estas son sus recomendaciones")
+        if self.temperatura < 35 and self.presionArterial < 90 and self.glucosa < 100:
+            print("Consumir mas productos de origen animal")  
+        elif self.temperatura >= 35 and self.temperatura < 37:
+            print("Consumir mas lacteos ademas de hacer rutinas que impliquen fuerza")
+        elif self.temperatura >= 37 and self.temperatura < 39:
+            print("Consumir mas frutas y verduras, ademas de aumentar el ejercico")
+        else:
+            exit("Adios")
+
 
 def main ():
     print("Bienvenido\nCalculadora de IMC\nEnter para continuar >>>")
