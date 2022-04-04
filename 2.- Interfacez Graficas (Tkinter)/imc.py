@@ -24,8 +24,7 @@ class Datos(ABC):
     @abstractmethod
     def recomendaciones(self):
         pass
-
-
+           
 
 class Paciente(Datos):
     def __init__(self):
@@ -58,7 +57,7 @@ class Paciente(Datos):
         print("Su presion arterial es: ", self.presionArterial)
         print("Su glucosa es: ", self.glucosa)
 
-    def recomendaciones(self):
+    def recomendacionesIMC(self):
         print("Estas son sus recomendaciones")
         if self.imc < 18.5:
             print("Consumir mas productos de origen animal")  
@@ -93,9 +92,15 @@ def main ():
         elif opcion == 2:
             paciente.calcularSignos()
         elif opcion == 3:
-            paciente.recomendaciones()
+            print("1.- Recomendacion IMC 2.- Recomendaciones Signos")
+            opcionFor=int(input(">"))
+            if opcionFor == 1:
+                paciente.recomendacionesIMC()
+            elif opcionFor ==2:
+                paciente.recomedacionesSignos()  
         elif opcion == 4:
             exit("Adios")
         else:
             print("Opcion no valida")
 main()
+ #excepcion  la clasificacion de tipos de excep´ciones, aq eu se referi la propagacion de exepciones, gestion, y crecion y manjeo de excecionbes unidad por el usuario
