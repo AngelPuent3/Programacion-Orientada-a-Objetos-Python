@@ -1,19 +1,16 @@
-def main():
-    print("Bienvenido al sistema de contratos")
-    print("Seleccione una opcion")
-    print("1.-Llenar datos\n2.-Crear contrato")
-    opcion = int(input("Ingrese una opcion: "))
-    if opcion == 1:
-        from contrato import Contratato
-        contrato = Contratato()
-        contrato.llenarDatos()
-    elif opcion == 2:
-        from contrato import Contratato
-        contrato = Contratato()
-        contrato.llenarContrato()
-    else:
-        print("Opcion no valida")
-        main()
+# This is a sample Python script.
+
+# Press Mayús+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-main()
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
