@@ -2,32 +2,17 @@ class Calificaciones:
     def __init__(self):
         self.matricula = str
         self.clave = str
-        self.calificacion = int
-
-    def leerFichero(self):
-        try:
-            fichero = open("calificaciones.txt", "r")
-            self.matricula = int(fichero.readline())
-            self.clave = fichero.readline()
-            self.calificacion = int(fichero.readline())
-            fichero.close()
-            print("Fichero leido")
-        except FileNotFoundError:
-            print("No se encontro el fichero")
-        except ValueError:
-            print("Error en el fichero")
-        except Exception:
-            print("Error desconocido")
+        self.calificacion = float
 
     def llenarFichero(self):
         self.matricula = str(input("Ingrese su matricula: "))
         self.clave = str(input("Ingrese su clave: "))
-        self.calificacion = int(input("Ingrese su calificacion: "))
+        self.calificacion = float(input("Ingrese su calificacion: "))
         #creacion del fichero
         fichero = open("calificaciones.txt", "w")
-        fichero.write(str(self.matricula) + "\n")
-        fichero.write(self.clave + "\n")
-        fichero.write(str(self.calificacion) + "\n")
+        fichero.write("matricula" + str(self.matricula) + "\n")
+        fichero.write("clave :" + self.clave + "\n")
+        fichero.write("calificacion : "+ str(self.calificacion) + "\n")
         fichero.close()
         print("Fichero creado")
 
@@ -55,4 +40,7 @@ class Calificaciones:
         fichero.close()
 
     def mostrarDatos(self):
-        print("Matricula: {}\nClave: {}\nCalificacion: {}".format(self.matricula, self.clave, self.calificacion))
+        try:
+            print(open("calificaciones.txt", "r").read())
+        except Exception:
+            print("Fichero inexistente o vacio")

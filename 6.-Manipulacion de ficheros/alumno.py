@@ -5,7 +5,6 @@ class Alumno:
         self.edad = int
         self.semestre = int
 
-    
     def llenarFichero(self):
         self.nombre = str(input("Ingrese su nombre: "))
         self.matricula = str(input("Ingrese su matricula: "))
@@ -13,32 +12,18 @@ class Alumno:
         self.semestre = int(input("Ingrese su semestre: "))
         #creacion del fichero
         fichero = open("alumno.txt", "w")
-        fichero.write(self.nombre + "\n")
-        fichero.write(self.matricula + "\n")
-        fichero.write(str(self.edad) + "\n")
-        fichero.write(str(self.semestre) + "\n")
+        fichero.write("nombre :" + self.nombre + "\n")
+        fichero.write("matricula" + self.matricula + "\n")
+        fichero.write("edad :" + str(self.edad) + "\n")
+        fichero.write("semestre:" + str(self.semestre) + "\n")
         fichero.close()
         print("Fichero creado")
 
-
-    def leerFichero(self):
-        try:
-            fichero = open("alumno.txt", "r")
-            self.nombre = fichero.readline()
-            self.matricula = int(fichero.readline())
-            self.edad = int(fichero.readline())
-            self.semestre = int(fichero.readline())
-            fichero.close()
-            print("Fichero leido")
-        except FileNotFoundError:
-            print("No se encontro el fichero")
-        except ValueError:
-            print("Error en el fichero")
-        except Exception:
-            print("Error desconocido")
-
     def mostrarDatos(self):
-        print("Nombre: {}\nMatricula: {}\nEdad: {}\nSemestre: {}".format(self.nombre, self.matricula, self.edad, self.semestre))
+        try:
+            print(open("alumno.txt", "r").read())
+        except Exception:
+            print("Fichero inexistente o vacio")
 
     def modificarFichero(self):
         #se modifica los datos del fichero
