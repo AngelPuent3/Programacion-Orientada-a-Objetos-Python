@@ -1,0 +1,4 @@
+Luis 	4545/4	Luis Angel Puente	2001	
+Luis Angel Puente Quevedo	20	luisAngelPuente@gmail.com	Puebla	Queso Chedar 	Muy buena, buen clima y buena atencion	3	Tarjeta de credito	10	Mas sabores	
+Luis 	21	luis@gmail.com	Puebla	Queso Cheddar	Buena	3	tarjeta de credito	10	Nada	
+luis	20	luisortega@gmail.com	Puebla	Hot spicy	regular	2	efectivo	1	ninguna	
